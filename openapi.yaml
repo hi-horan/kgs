@@ -1,0 +1,43 @@
+# Generated with protoc-gen-openapi
+# https://github.com/google/gnostic/tree/master/cmd/protoc-gen-openapi
+
+openapi: 3.0.3
+info:
+    title: KGS API
+    version: 0.0.1
+paths:
+    /api/v1/keys:
+        post:
+            tags:
+                - KGS
+            operationId: KGS_GetKeys
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/v1.GetKeysRequest'
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/v1.GetKeysReply'
+components:
+    schemas:
+        v1.GetKeysReply:
+            type: object
+            properties:
+                keys:
+                    type: array
+                    items:
+                        type: string
+        v1.GetKeysRequest:
+            type: object
+            properties:
+                count:
+                    type: integer
+                    format: int64
+tags:
+    - name: KGS

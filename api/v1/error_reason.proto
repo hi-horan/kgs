@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package helloworld.v1;
+
+option go_package = "kgs/api/v1;v1";
+option java_multiple_files = true;
+option java_package = "kgs.v1";
+option objc_class_prefix = "APIKGSV1";
+
+enum ErrorReason {
+  UNSPECIFIED = 0;
+  HAVE_NO_KEYS = 10000;
+}

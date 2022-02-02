@@ -1,0 +1,14 @@
+
+server:
+  grpc:
+    addr: 0.0.0.0:9000
+    timeout: 1s
+data:
+  file_path: ./key_file
+  current_key_index: ./current_key_index
+  each_key_len: 7 # 包含换行
+  pre_alloc_count: 200
+  key_chan_len: 100
+
+jaeger:
+  url: http://127.0.0.1:14268/api/traces
